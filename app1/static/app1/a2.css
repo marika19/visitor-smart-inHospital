@@ -1,0 +1,33 @@
+
+/* ヘッダー */
+.header
+{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 2em;
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+
+/* フッター */
+.footer
+{
+    border-top: 3px solid black;
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+
+
+/* メイン */
+.main
+{
+    padding: 1em 0;
+    margin-bottom: 2em;
+    background-color: white;
+}

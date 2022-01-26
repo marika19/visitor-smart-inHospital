@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<!-- 言語指定をenからjaに変更 -->
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'app1/s1.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/s2.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/s3.css' %}" />
+</head>
+
+<body>
+  <h1>○○病院</h1>
+
+  <div class="header">
+    <b>面会スマート<br>(面会者情報の登録完了)</b>
+  </div>
+
+
+  <br>
+  <b>ご登録ありがとうございます。<br>
+    下記のボタンより、ログインページにお進みください。</b>
+  </br>
+
+
+  <!-- ログインページのリンクテキスト -->
+  <p><a href="{% url 'accounts:login2' %}" class="btn-square">ログイン</a>
+  <p>
+</body>
+
+</html>

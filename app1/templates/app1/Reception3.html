@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'app1/a1.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/a2.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/a3.css' %}" />
+</head>
+
+<body>
+  <h1>○○病院</h1>
+  <div class="header">
+    <b>面会スマート<br>(帰院時刻入力)</b>
+  </div>
+  <div class="main">
+    お帰りの際は、下記に現在時刻を入力してください
+
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <table>
+        <tr>
+          <th>帰院時刻</th>
+          <td>{{ form.OutHospital}}</td>
+        </tr>
+      </table>
+      <hr>
+      <button type="submit" class="btn-square">OK</button>
+    </form>
+  </div>
+</body>
+
+</html>

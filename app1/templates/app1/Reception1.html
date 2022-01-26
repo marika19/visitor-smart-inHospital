@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'app1/a1.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/a2.css' %}" />
+  <link rel=" stylesheet" type="text/css" href="{% static 'app1/a3.css' %}" />
+</head>
+
+<body>
+  <h1>○○病院</h1>
+  <div class="header">
+    <b>面会スマート<br>(面会情報入力)</b>
+  </div>
+
+  <div class="main">
+    面会事前登録ありがとうございます。<br>
+    下記の情報をご入力ください。
+    <!-- ファイルをアップロードする場合は
+                     enctype="multipart/form-data"が必要 -->
+    <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+      <table>
+        <tr>
+          <th>体温(面会者様)</th>
+          <td>{{ form.bt1 }}</td>
+        </tr>
+        <tr>
+          <th>体温(同伴者様)</th>
+          <td>{{ form.bt2 }}
+            <p style="color:rgb(99, 98, 98)">※同伴者が不在の場合は空欄
+            </p>
+        </tr>
+        <tr>
+          <th>来院時刻</th>
+          <td>{{ form.InHospital}}</td>
+        </tr>
+      </table>
+      <hr>
+      <button type="submit" class="btn-square">OK</button>
+    </form>
+  </div>
+</body>
+
+</html>
