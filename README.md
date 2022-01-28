@@ -9,7 +9,7 @@ python3 -m venv env
 ## 仮想環境に入る
 ### Windowsの場合
 ```
-
+.\env\Scripts\activate
 ```
 
 ### Macの場合
